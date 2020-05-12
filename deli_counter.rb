@@ -1,3 +1,10 @@
+def line
+  line = [1, 2, 3]
+  if line == []
+    puts "The line is currently empty."
+  end
+
+
 katz_deli = []
 
 take_a_number(katz_deli, "Ada")
