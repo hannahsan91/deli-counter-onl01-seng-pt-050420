@@ -1,3 +1,4 @@
+def deli_counter
 katz_deli = []
 
 take_a_number(katz_deli, "Ada")
@@ -13,3 +14,4 @@ line(katz_deli)
 now_serving(katz_deli)
 
 line(katz_deli)
+end
