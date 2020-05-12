@@ -1,22 +1,22 @@
-def line
-  line = [1, 2, 3]
-  if line == []
-    puts "The line is currently empty."
+def line(katz_deli)
+  line_positions = []
+  if katz_deli.empty?
+    puts "The line is currently empty"
+  else
+    number = 1
+    katz_deli.each do |customer|
+      line_positions << "#{number}. #{customer}"
+      number += 1
+    end
+    puts "The line is currently: #{line_positions.join(" ")}"
   end
+end
 
-
-katz_deli = []
-
-take_a_number(katz_deli, "Ada")
-take_a_number(katz_deli, "Grace")
-take_a_number(katz_deli, "Kent")
-
-line(katz_deli)
-
-take_a_number(katz_deli, "Matz")
-
-line(katz_deli)
-
-now_serving(katz_deli)
-
-line(katz_deli)
+def take_a_number(katz_deli)
+  if katz_deli.empty?
+    puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{katz_deli.first}."
+    katz_deli.shift
+  end
+end
